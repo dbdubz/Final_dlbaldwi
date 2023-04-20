@@ -10,7 +10,6 @@ namespace Final_dlbaldwi.Models
 {
     public partial class Agents
     {
-
         [Key]
         public long AgentId { get; set; }
         public string AgtFirstName { get; set; }
