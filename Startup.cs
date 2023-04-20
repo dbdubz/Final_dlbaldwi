@@ -26,7 +26,7 @@ namespace Final_dlbaldwi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<EntertainmentDbContext>(options =>
+            services.AddDbContext<EntertainmentAgencyExampleContext>(options =>
             {
                 options.UseSqlite(Configuration.GetConnectionString("Entertainment"));
             });
