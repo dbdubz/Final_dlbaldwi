@@ -12,7 +12,7 @@ namespace Final_dlbaldwi.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private IEntertainmentRepository _repo;
+        private readonly IEntertainmentRepository _repo;
 
         public HomeController(ILogger<HomeController> logger, IEntertainmentRepository repo)
         {
