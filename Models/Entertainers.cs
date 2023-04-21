@@ -21,6 +21,7 @@ namespace Final_dlbaldwi.Models
         public string EntZipCode { get; set; }
         public string EntPhoneNumber { get; set; }
         public string EntWebPage { get; set; }
+        [EmailAddress]
         public string EntEmailAddress { get; set; }
         public string DateEntered { get; set; }
     }

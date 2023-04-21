@@ -30,6 +30,7 @@ namespace Final_dlbaldwi
             {
                 options.UseSqlite(Configuration.GetConnectionString("Entertainment"));
             });
+            services.AddScoped<IEntertainmentRepository, EFEntertainersRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,63 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Entertainers
+
+<a asp-controller="Home" asp-action="Delete" asp-route-id="@Model.EntertainerId" class="btn btn-warning align-self-center">Delete</a>
+<br />
+<form asp-controller="Home" asp-action="About" method="post">
+    <input type="hidden" asp-for="EntertainerId" value="@Model.EntertainerId" />
+    <div class="form-group">
+        <label asp-for="EntStageName">Stage Name</label>
+        <input type="text" asp-for="EntStageName" />
+        <span asp-validation-for="EntStageName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntSsn">SSN</label>
+        <input type="text" asp-for="EntSsn" />
+        <span asp-validation-for="EntSsn"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntStreetAddress">Street Address</label>
+        <input type="text" asp-for="EntStreetAddress" />
+        <span asp-validation-for="EntStreetAddress"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntCity">City</label>
+        <input type="text" asp-for="EntCity" />
+        <span asp-validation-for="EntCity"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntState">State</label>
+        <input type="text" asp-for="EntState" />
+        <span asp-validation-for="EntState"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntZipCode">ZipCode</label>
+        <input type="number"  asp-for="EntZipCode" />
+        <span asp-validation-for="EntZipCode"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntPhoneNumber">Phone Number</label>
+        <input type="text" asp-for="EntPhoneNumber" />
+        <span asp-validation-for="EntPhoneNumber"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntWebPage">Website</label>
+        <input type="text" asp-for="EntWebPage" />
+        <span asp-validation-for="EntWebPage"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="EntEmailAddress">Email</label>
+        <input type="email" asp-for="EntEmailAddress" />
+        <span asp-validation-for="EntEmailAddress"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DateEntered">Date Entered</label>
+        <input type="date" asp-for="DateEntered" />
+        <span asp-validation-for="DateEntered"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
