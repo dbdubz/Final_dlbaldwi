@@ -5,7 +5,7 @@
 }
 @model Entertainers
 
-<form asp-controller="Home" asp-action="About" method="post">
+<form asp-controller="Home" asp-action="Add" method="post">
     <input type="hidden" asp-for="EntertainerId" value="@ViewBag.NextId" />
     <div class="form-group">
         <label asp-for="EntStageName">Stage Name</label>

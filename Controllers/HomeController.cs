@@ -44,7 +44,7 @@ namespace Final_dlbaldwi.Controllers
         {
             _repo.UpdateEntertainers(entertainer);
             var ent = _repo.Entertainers.Single(e => e.EntertainerId == entertainer.EntertainerId);
-            return View("Entertainers");
+            return RedirectToAction("Entertainers");
         }
 
         [HttpGet]
@@ -52,7 +52,7 @@ namespace Final_dlbaldwi.Controllers
         {
             Entertainers entertainer = new Entertainers();
 
-            long nextId = _repo.GetNextId();
+            string nextId = _repo.GetNextId().ToString();
 
             ViewBag.NextId = nextId;
 
@@ -63,15 +63,14 @@ namespace Final_dlbaldwi.Controllers
         public IActionResult Add(Entertainers entertainer)
         {
             _repo.AddEntertainer(entertainer);
-            return View("Entertainers");
+            return RedirectToAction("Entertainers");
         }
 
-        [HttpPost]
         public IActionResult Delete(long id)
         {
             Entertainers entertainer = _repo.Entertainers.Single(e => e.EntertainerId == id);
             _repo.DeleteEntertainer(entertainer);
-            return View("Entertainers");
+            return RedirectToAction("Entertainers");
         }
 
         public IActionResult Privacy()
